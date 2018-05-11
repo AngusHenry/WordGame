@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Angus Henry
+ * WordGameFram.java
+ * This program makes sentences out of words given
+ * 11/05/2018
  */
 
 package wordgame;
@@ -52,6 +53,16 @@ public class WordGameFrame extends javax.swing.JFrame {
         adverbInput = new javax.swing.JTextField();
         nounInput = new javax.swing.JTextField();
         adjectiveInput = new javax.swing.JTextField();
+        addName = new javax.swing.JButton();
+        removeName = new javax.swing.JButton();
+        addVerb = new javax.swing.JButton();
+        removeverb = new javax.swing.JButton();
+        addAdverb = new javax.swing.JButton();
+        removeAdverb = new javax.swing.JButton();
+        Addnoun = new javax.swing.JButton();
+        removenoun = new javax.swing.JButton();
+        Addadj = new javax.swing.JButton();
+        removeadj = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -113,31 +124,125 @@ public class WordGameFrame extends javax.swing.JFrame {
             }
         });
 
+        addName.setText("Add");
+        addName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNameActionPerformed(evt);
+            }
+        });
+
+        removeName.setText("Remove");
+        removeName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeNameActionPerformed(evt);
+            }
+        });
+
+        addVerb.setText("Add");
+        addVerb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addVerbActionPerformed(evt);
+            }
+        });
+
+        removeverb.setText("Remove");
+        removeverb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeverbActionPerformed(evt);
+            }
+        });
+
+        addAdverb.setText("Add");
+        addAdverb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addAdverbActionPerformed(evt);
+            }
+        });
+
+        removeAdverb.setText("Remove");
+        removeAdverb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeAdverbActionPerformed(evt);
+            }
+        });
+
+        Addnoun.setText("Add");
+        Addnoun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddnounActionPerformed(evt);
+            }
+        });
+
+        removenoun.setText("Remove");
+        removenoun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removenounActionPerformed(evt);
+            }
+        });
+
+        Addadj.setText("Add");
+        Addadj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddadjActionPerformed(evt);
+            }
+        });
+
+        removeadj.setText("Remove");
+        removeadj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeadjActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(46, 46, 46)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel6))
-                            .addGap(15, 15, 15)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(adjectiveInput)
-                                .addComponent(nounInput)
-                                .addComponent(adverbInput)
-                                .addComponent(verbInput)
-                                .addComponent(nameInput)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addGap(149, 149, 149)
-                            .addComponent(jLabel1)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6))
+                                .addGap(15, 15, 15)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(adjectiveInput)
+                                    .addComponent(nounInput)
+                                    .addComponent(adverbInput)
+                                    .addComponent(verbInput)
+                                    .addComponent(nameInput)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(149, 149, 149)
+                                .addComponent(jLabel1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Addnoun)
+                                .addGap(18, 18, 18)
+                                .addComponent(removenoun))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(addAdverb)
+                                .addGap(18, 18, 18)
+                                .addComponent(removeAdverb))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(addVerb)
+                                .addGap(18, 18, 18)
+                                .addComponent(removeverb))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(addName)
+                                .addGap(18, 18, 18)
+                                .addComponent(removeName))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(Addadj)
+                                .addGap(18, 18, 18)
+                                .addComponent(removeadj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,7 +254,7 @@ public class WordGameFrame extends javax.swing.JFrame {
                                 .addComponent(removeButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(initButton))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE))))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -160,23 +265,36 @@ public class WordGameFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(nameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nameInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addName)
+                    .addComponent(removeName))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(verbInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(addVerb)
+                    .addComponent(removeverb))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
-                    .addComponent(adverbInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(adverbInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(addAdverb)
+                        .addComponent(removeAdverb)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5)
-                    .addComponent(nounInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(nounInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Addnoun)
+                        .addComponent(removenoun)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6)
-                    .addComponent(adjectiveInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(adjectiveInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Addadj)
+                        .addComponent(removeadj)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(displayButton)
@@ -185,7 +303,7 @@ public class WordGameFrame extends javax.swing.JFrame {
                     .addComponent(initButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jMenu1.setText("File");
@@ -221,12 +339,12 @@ public class WordGameFrame extends javax.swing.JFrame {
 
     private void displayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayButtonActionPerformed
         outputBox.setText( names.get(rn.nextInt(names.size()))
-      + " " + adverbs.get(rn.nextInt(names.size()))
-      + " " + verbs.get(rn.nextInt(names.size()))
-      + " on top of the "  + adjectives.get(rn.nextInt(names.size()))
-      + " " + nouns.get(rn.nextInt(names.size()))
-      + " trying to escape the " + adjectives.get(rn.nextInt(names.size()))
-      + " " + nouns.get(rn.nextInt(names.size())) + "!");
+      + " " + adverbs.get(rn.nextInt(adverbs.size()))
+      + " " + verbs.get(rn.nextInt(verbs.size()))
+      + " on top of the "  + adjectives.get(rn.nextInt(adjectives.size()))
+      + " " + nouns.get(rn.nextInt(nouns.size()))
+      + " trying to escape the " + adjectives.get(rn.nextInt(adjectives.size()))
+      + " " + nouns.get(rn.nextInt(nouns.size())) + "!");
     }//GEN-LAST:event_displayButtonActionPerformed
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
@@ -257,6 +375,46 @@ public class WordGameFrame extends javax.swing.JFrame {
     private void verbInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verbInputActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_verbInputActionPerformed
+
+    private void addNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNameActionPerformed
+        names.add (nameInput.getText ());
+    }//GEN-LAST:event_addNameActionPerformed
+
+    private void addVerbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addVerbActionPerformed
+       verbs.add (verbInput.getText ());
+    }//GEN-LAST:event_addVerbActionPerformed
+
+    private void addAdverbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAdverbActionPerformed
+        adverbs.add (adverbInput.getText ());
+    }//GEN-LAST:event_addAdverbActionPerformed
+
+    private void AddnounActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddnounActionPerformed
+        nouns.add (nounInput.getText ());
+    }//GEN-LAST:event_AddnounActionPerformed
+
+    private void AddadjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddadjActionPerformed
+       adjectives.add (adjectiveInput.getText ());
+    }//GEN-LAST:event_AddadjActionPerformed
+
+    private void removeNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeNameActionPerformed
+         names.remove (nameInput.getText());
+    }//GEN-LAST:event_removeNameActionPerformed
+
+    private void removeverbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeverbActionPerformed
+       verbs.remove (verbInput.getText());
+    }//GEN-LAST:event_removeverbActionPerformed
+
+    private void removeAdverbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAdverbActionPerformed
+        adverbs.remove (adverbInput.getText());
+    }//GEN-LAST:event_removeAdverbActionPerformed
+
+    private void removenounActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removenounActionPerformed
+       nouns.remove (nounInput.getText());
+    }//GEN-LAST:event_removenounActionPerformed
+
+    private void removeadjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeadjActionPerformed
+        adjectives.remove (adjectiveInput.getText());
+    }//GEN-LAST:event_removeadjActionPerformed
 
     /**
      * @param args the command line arguments
@@ -294,7 +452,12 @@ public class WordGameFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Addadj;
+    private javax.swing.JButton Addnoun;
+    private javax.swing.JButton addAdverb;
     private javax.swing.JButton addButton;
+    private javax.swing.JButton addName;
+    private javax.swing.JButton addVerb;
     private javax.swing.JTextField adjectiveInput;
     private javax.swing.JTextField adverbInput;
     private javax.swing.JButton displayButton;
@@ -313,7 +476,12 @@ public class WordGameFrame extends javax.swing.JFrame {
     private javax.swing.JTextField nameInput;
     private javax.swing.JTextField nounInput;
     private javax.swing.JTextArea outputBox;
+    private javax.swing.JButton removeAdverb;
     private javax.swing.JButton removeButton;
+    private javax.swing.JButton removeName;
+    private javax.swing.JButton removeadj;
+    private javax.swing.JButton removenoun;
+    private javax.swing.JButton removeverb;
     private javax.swing.JTextField verbInput;
     // End of variables declaration//GEN-END:variables
 }
